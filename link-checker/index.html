@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cyber Link & Email Phishing Checker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🔐 Phishing Detection Tool</h1>
+<p>Analyze suspicious links and phishing emails without opening them.</p>
+
+<h2>🔗 Check Suspicious Link</h2>
+
+<input type="text" id="urlInput" placeholder="Paste suspicious link here">
+<button onclick="checkLink()">Analyze Link</button>
+
+<h2>📧 Check Suspicious Email</h2>
+
+<textarea id="emailInput" placeholder="Paste the email message here"></textarea>
+<button onclick="checkEmail()">Analyze Email</button>
+
+<div id="result"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
