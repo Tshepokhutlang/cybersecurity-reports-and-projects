@@ -1,0 +1,76 @@
+subject,body,label,email_text
+Meeting scheduled,Your meeting is scheduled for tomorrow at 2pm in conference room A,0,Meeting scheduled Your meeting is scheduled for tomorrow at 2pm in conference room A
+Project update,The project has been completed on schedule with all requirements met,0,Project update The project has been completed on schedule with all requirements met
+Weekly report,Please find the weekly report attached for your review,0,Weekly report Please find the weekly report attached for your review
+Team announcement,Team lunch is scheduled for Friday at noon in the office,0,Team announcement Team lunch is scheduled for Friday at noon in the office
+Quarterly results,Our quarterly results show strong growth in all departments,0,Quarterly results Our quarterly results show strong growth in all departments
+Project deadline,The project deadline has been extended to next month,0,Project deadline The project deadline has been extended to next month
+Training session,Attendance at the training session is required for new team members,0,Training session Attendance at the training session is required for new team members
+System maintenance,Scheduled system maintenance will occur on Sunday night,0,System maintenance Scheduled system maintenance will occur on Sunday night
+Document sharing,New documents have been shared with your team for collaboration,0,Document sharing New documents have been shared with your team for collaboration
+Event invitation,You are invited to the annual company event next week,0,Event invitation You are invited to the annual company event next week
+Status update,Here is the current status of all ongoing projects,0,Status update Here is the current status of all ongoing projects
+Budget approval,The budget for Q1 has been approved and is ready for distribution,0,Budget approval The budget for Q1 has been approved and is ready for distribution
+Policy reminder,Please review the updated company policies in the shared folder,0,Policy reminder Please review the updated company policies in the shared folder
+Holiday schedule,The holiday schedule for this year has been published,0,Holiday schedule The holiday schedule for this year has been published
+Performance review,Your quarterly performance review is now available,0,Performance review Your quarterly performance review is now available
+Office closure,The office will be closed next Monday for maintenance,0,Office closure The office will be closed next Monday for maintenance
+Newsletter,The monthly company newsletter is now available,0,Newsletter The monthly company newsletter is now available
+Survey request,Please complete the employee satisfaction survey by Friday,0,Survey request Please complete the employee satisfaction survey by Friday
+IT support,Your IT support ticket has been resolved,0,IT support Your IT support ticket has been resolved
+Travel booking,Your business travel has been booked successfully,0,Travel booking Your business travel has been booked successfully
+Conference registration,Your registration for the industry conference is confirmed,0,Conference registration Your registration for the industry conference is confirmed
+Department meeting,Department meeting scheduled for next Tuesday,0,Department meeting Department meeting scheduled for next Tuesday
+Resource allocation,New resources have been allocated to your project,0,Resource allocation New resources have been allocated to your project
+Code review,Your code changes have been reviewed and approved,0,Code review Your code changes have been reviewed and approved
+Documentation update,The project documentation has been updated,0,Documentation update The project documentation has been updated
+Team building,Team building event planned for next month,0,Team building Team building event planned for next month
+Feedback session,Feedback session with management scheduled,0,Feedback session Feedback session with management scheduled
+Equipment request,Your equipment request has been approved,0,Equipment request Your equipment request has been approved
+Software update,New software version available for installation,0,Software update New software version available for installation
+Security training,Mandatory security training session next week,0,Security training Mandatory security training session next week
+Vendor meeting,Vendor meeting confirmed for Thursday,0,Vendor meeting Vendor meeting confirmed for Thursday
+Progress report,Monthly progress report is due by end of week,0,Progress report Monthly progress report is due by end of week
+Client presentation,Client presentation materials are ready,0,Client presentation Client presentation materials are ready
+Database backup,Database backup completed successfully,0,Database backup Database backup completed successfully
+Server maintenance,Server maintenance window scheduled,0,Server maintenance Server maintenance window scheduled
+Access request,Your access request has been processed,0,Access request Your access request has been processed
+Password policy,Password policy reminder sent to all users,0,Password policy Password policy reminder sent to all users
+Backup verification,Backup verification completed,0,Backup verification Backup verification completed
+System monitoring,System monitoring alerts configured,0,System monitoring System monitoring alerts configured
+Network upgrade,Network upgrade scheduled for weekend,0,Network upgrade Network upgrade scheduled for weekend
+Verify your account,Click here to verify your account immediately before it is suspended,1,Verify your account Click here to verify your account immediately before it is suspended
+Urgent action required,Confirm your banking credentials now for security purposes,1,Urgent action required Confirm your banking credentials now for security purposes
+Claim your reward,You have won a prize click to claim it now,1,Claim your reward You have won a prize click to claim it now
+Confirm identity,Verify your identity by clicking this link to continue,1,Confirm identity Verify your identity by clicking this link to continue
+Password reset needed,Your password has expired reset it using this link,1,Password reset needed Your password has expired reset it using this link
+Update payment method,Please update your payment method to continue service,1,Update payment method Please update your payment method to continue service
+Suspicious activity detected,We detected suspicious activity on your account,1,Suspicious activity detected We detected suspicious activity on your account
+Recover your account,Your account has been compromised recover access now,1,Recover your account Your account has been compromised recover access now
+Limited time offer,Special discount available for limited time only,1,Limited time offer Special discount available for limited time only
+Re-confirm your password,Please re-confirm your password for security verification,1,Re-confirm your password Please re-confirm your password for security verification
+Account verification required,Your account needs immediate verification to avoid suspension,1,Account verification required Your account needs immediate verification to avoid suspension
+Security alert,Unusual login detected please verify your identity,1,Security alert Unusual login detected please verify your identity
+Payment confirmation needed,Confirm your recent payment to complete the transaction,1,Payment confirmation needed Confirm your recent payment to complete the transaction
+Bank account update required,Update your bank details for continued service,1,Bank account update required Update your bank details for continued service
+Prize winner notification,Congratulations you have won a cash prize,1,Prize winner notification Congratulations you have won a cash prize
+Your Signature is Missing,Please sign the attached document immediately,1,Your Signature is Missing Please sign the attached document immediately
+New message from,You have received a new message from an important contact,1,New message from You have received a new message from an important contact
+New scanned fax,A fax has been received and scanned for your review,1,New scanned fax A fax has been received and scanned for your review
+Delivery Mishap,There was an issue with your package delivery,1,Delivery Mishap There was an issue with your package delivery
+Our driver attempted to deliver your shipment,Your package could not be delivered today,1,Our driver attempted to deliver your shipment Your package could not be delivered today
+UPS Label Delivery,Your UPS package is ready for pickup,1,UPS Label Delivery Your UPS package is ready for pickup
+FedEx tracking,Track your FedEx package delivery status,1,FedEx tracking Track your FedEx package delivery status
+USPS delivery,Your USPS package is out for delivery,1,USPS delivery Your USPS package is out for delivery
+Password Check Required Immediately,Your password security check is overdue,1,Password Check Required Immediately Your password security check is overdue
+Password Expiration Notice,Your password will expire soon,1,Password Expiration Notice Your password will expire soon
+IT: Company Policy Update,New IT security policies have been implemented,1,IT: Company Policy Update New IT security policies have been implemented
+Unusual sign-in activity,We detected unusual sign-in activity on your account,1,Unusual sign-in activity We detected unusual sign-in activity on your account
+Large Numbers of files were recently deleted,Security alert: files deleted from your account,1,Large Numbers of files were recently deleted Security alert: files deleted from your account
+LinkedIn: Profile Views,Someone viewed your LinkedIn profile,1,LinkedIn: Profile Views Someone viewed your LinkedIn profile
+Join my network,Connect with me on LinkedIn for professional networking,1,Join my network Connect with me on LinkedIn for professional networking
+You were mentioned in a meeting transcript,You were mentioned in today's meeting,1,You were mentioned in a meeting transcript You were mentioned in today's meeting
+A friend tagged a photo of you,Check out this photo you were tagged in,1,A friend tagged a photo of you Check out this photo you were tagged in
+Shared a document with you,A document has been shared with you,1,Shared a document with you A document has been shared with you
+Voice message,You have a new voice message,1,Voice message You have a new voice message
+Fax transmission,A fax has been transmitted to your account,1,Fax transmission A fax has been transmitted to your account

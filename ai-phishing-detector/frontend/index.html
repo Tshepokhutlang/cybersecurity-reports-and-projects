@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Phishing Detector - Professional Email Security Analysis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔒</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="logo">
+                    <h1>🔒 AI Phishing Detector</h1>
+                    <span class="subtitle">Enterprise-Grade Email Security Analysis</span>
+                </div>
+                <div class="status-indicator">
+                    <div class="status-dot" id="backend-status"></div>
+                    <span class="status-text">Backend Status</span>
+                </div>
+            </div>
+            <p>Advanced machine learning-powered phishing detection with real-time analysis and comprehensive security insights</p>
+        </header>
+
+        <nav class="main-nav">
+            <button class="nav-btn active" data-tab="analyze">Analyze Email</button>
+            <button class="nav-btn" data-tab="batch">Batch Analysis</button>
+            <button class="nav-btn" data-tab="history">Analysis History</button>
+            <button class="nav-btn" data-tab="settings">Settings</button>
+        </nav>
+
+        <main>
+            <!-- Single Email Analysis Tab -->
+            <div id="analyze-tab" class="tab-content active">
+                <div class="form-section">
+                    <h2>🔍 Email Analysis</h2>
+                    <form id="detector-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email-subject">Email Subject:</label>
+                                <input type="text" id="email-subject" placeholder="Enter email subject line" required maxlength="200">
+                                <div class="char-count"><span id="subject-count">0</span>/200</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email-body">Email Body:</label>
+                            <textarea id="email-body" placeholder="Paste the full email content here..." rows="8" required maxlength="5000"></textarea>
+                            <div class="char-count"><span id="body-count">0</span>/5000</div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="sender-email">Sender Email (Optional):</label>
+                                <input type="email" id="sender-email" placeholder="sender@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="analysis-mode">Analysis Mode:</label>
+                                <select id="analysis-mode">
+                                    <option value="standard">Standard Analysis</option>
+                                    <option value="detailed">Detailed Analysis</option>
+                                    <option value="comprehensive">Comprehensive Scan</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-analyze">
+                                <span class="btn-icon">🔍</span>
+                                Analyze Email
+                            </button>
+                            <button type="button" class="btn-clear" id="clear-form">
+                                <span class="btn-icon">🗑️</span>
+                                Clear Form
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="result-section" class="result-section hidden">
+                    <div class="result-header">
+                        <h2>📊 Analysis Results</h2>
+                        <div class="result-actions">
+                            <button class="btn-export" id="export-result">Export Report</button>
+                            <button class="btn-share" id="share-result">Share Analysis</button>
+                        </div>
+                    </div>
+
+                    <div class="result-summary">
+                        <div class="prediction-badge" id="prediction-badge">
+                            <span class="prediction-icon"></span>
+                            <span class="prediction-text" id="prediction"></span>
+                        </div>
+                        <div class="confidence-meter">
+                            <div class="meter-label">Confidence Level</div>
+                            <div class="meter-bar">
+                                <div class="meter-fill" id="confidence-fill"></div>
+                            </div>
+                            <div class="meter-value" id="confidence"></div>
+                        </div>
+                    </div>
+
+                    <div class="result-details">
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <label>Risk Level:</label>
+                                <span id="risk-level" class="risk-badge"></span>
+                            </div>
+                            <div class="detail-item">
+                                <label>Analysis Time:</label>
+                                <span id="analysis-time"></span>
+                            </div>
+                            <div class="detail-item">
+                                <label>Threat Score:</label>
+                                <span id="threat-score"></span>
+                            </div>
+                            <div class="detail-item">
+                                <label>Detection Method:</label>
+                                <span id="detection-method">Machine Learning</span>
+                            </div>
+                        </div>
+
+                        <div class="analysis-breakdown">
+                            <h3>🔬 Analysis Breakdown</h3>
+                            <div class="breakdown-content" id="breakdown-content">
+                                <!-- Dynamic content will be inserted here -->
+                            </div>
+                        </div>
+
+                        <div class="recommendations">
+                            <h3>💡 Recommendations</h3>
+                            <ul id="recommendations-list">
+                                <!-- Dynamic recommendations will be inserted here -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Batch Analysis Tab -->
+            <div id="batch-tab" class="tab-content">
+                <div class="batch-section">
+                    <h2>📦 Batch Email Analysis</h2>
+                    <p>Upload multiple emails for bulk analysis</p>
+
+                    <div class="upload-area" id="upload-area">
+                        <div class="upload-icon">📁</div>
+                        <p>Drag & drop CSV file or click to browse</p>
+                        <input type="file" id="batch-file" accept=".csv" style="position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;">
+                        <label class="btn-upload" for="batch-file" id="browse-btn">Browse Files</label>
+                    </div>
+
+                    <div class="batch-options">
+                        <label>
+                            <input type="checkbox" id="include-headers"> First row contains headers
+                        </label>
+                        <label>
+                            <input type="checkbox" id="auto-export"> Auto-export results
+                        </label>
+                    </div>
+
+                    <button class="btn-analyze-batch" id="analyze-batch-btn" disabled>
+                        <span class="btn-icon">⚡</span>
+                        Analyze Batch
+                    </button>
+
+                    <div id="batch-progress" class="batch-progress hidden">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                        <div class="progress-text" id="progress-text">Processing emails...</div>
+                    </div>
+
+                    <div id="batch-results" class="batch-results hidden">
+                        <h3>Batch Analysis Complete</h3>
+                        <div class="batch-stats">
+                            <div class="stat-item">
+                                <span class="stat-number" id="total-emails">0</span>
+                                <span class="stat-label">Total Emails</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="phishing-count">0</span>
+                                <span class="stat-label">Phishing Detected</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="legitimate-count">0</span>
+                                <span class="stat-label">Legitimate</span>
+                            </div>
+                        </div>
+                        <button class="btn-download" id="download-results">Download Results</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- History Tab -->
+            <div id="history-tab" class="tab-content">
+                <div class="history-section">
+                    <h2>📚 Analysis History</h2>
+                    <div class="history-controls">
+                        <input type="text" id="history-search" placeholder="Search history...">
+                        <select id="history-filter">
+                            <option value="all">All Results</option>
+                            <option value="phishing">Phishing Only</option>
+                            <option value="legitimate">Legitimate Only</option>
+                        </select>
+                        <button class="btn-clear-history" id="clear-history">Clear History</button>
+                    </div>
+                    <div id="history-list" class="history-list">
+                        <!-- History items will be populated here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings Tab -->
+            <div id="settings-tab" class="tab-content">
+                <div class="settings-section">
+                    <h2>⚙️ Settings</h2>
+
+                    <div class="settings-group">
+                        <h3>Analysis Preferences</h3>
+                        <div class="setting-item">
+                            <label>
+                                <input type="checkbox" id="auto-save-history"> Auto-save analysis history
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <label>
+                                <input type="checkbox" id="show-confidence"> Show confidence percentages
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <label>
+                                <input type="checkbox" id="detailed-breakdown"> Enable detailed analysis breakdown
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-group">
+                        <h3>Notifications</h3>
+                        <div class="setting-item">
+                            <label>
+                                <input type="checkbox" id="notify-high-risk"> Notify on high-risk detections
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <label>
+                                <input type="checkbox" id="sound-alerts"> Enable sound alerts
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-group">
+                        <h3>Export Options</h3>
+                        <div class="setting-item">
+                            <label for="export-format">Default export format:</label>
+                            <select id="export-format">
+                                <option value="pdf">PDF Report</option>
+                                <option value="csv">CSV Data</option>
+                                <option value="json">JSON Data</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="btn-save-settings" id="save-settings">Save Settings</button>
+                </div>
+            </div>
+
+            <div id="error-section" class="error-section hidden">
+                <div class="error-icon">⚠️</div>
+                <h3>Analysis Error</h3>
+                <p id="error-message"></p>
+                <button class="btn-retry" id="retry-analysis">Retry Analysis</button>
+            </div>
+
+            <div id="loading" class="loading hidden">
+                <div class="loading-spinner"></div>
+                <p>Analyzing email with AI...</p>
+                <div class="loading-tip" id="loading-tip">Tip: Our AI analyzes multiple factors including sender reputation, content patterns, and linguistic cues.</div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>AI Phishing Detector</h4>
+                    <p>Advanced email security powered by machine learning</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Features</h4>
+                    <ul>
+                        <li>Real-time Analysis</li>
+                        <li>Batch Processing</li>
+                        <li>Comprehensive Reports</li>
+                        <li>Enterprise Security</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li>Documentation</li>
+                        <li>API Reference</li>
+                        <li>Contact Support</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AI Phishing Detector | Version 2.0 | Powered by Advanced Machine Learning</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
