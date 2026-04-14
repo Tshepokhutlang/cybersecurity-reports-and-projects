@@ -1,0 +1,8 @@
+SECURITY LOG REPORT
+2026-04-14 07:49:28.984181
+-------------------
+Failed Logins: 4
+Successful Logins: 2
+
+Suspicious IPs:
+192.168.1.10
